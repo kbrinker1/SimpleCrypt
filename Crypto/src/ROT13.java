@@ -1,3 +1,5 @@
+package Crypto.src;
+
 import static java.lang.Character.isLowerCase;
 import static java.lang.Character.isUpperCase;
 import static java.lang.Character.toLowerCase;
@@ -17,6 +19,9 @@ public class ROT13  {
     }
 
     public String encrypt(String text) {
+        for (int i = 0; i < text.length(); i++ ){
+            
+        }
         return text;
     }
 
