@@ -14,19 +14,33 @@ public class ROT13  {
 
 
     public String crypt(String text) throws UnsupportedOperationException {
-
-        return "";
+        StringBuilder enigma = new StringBuilder();
+        for (int i = 0; i<text.length(); i++){
+            char coder = text.charAt(i);
+            if (coder >= 'A' && coder <= 'M'){
+                coder+=13;
+            }
+            else if (coder >= 'N' && coder <= 'Z'){
+                coder-=13;
+            }
+            else if (coder >= 'a' && coder <= 'm'){
+                coder+=13;
+            }
+            else if (coder >= 'n' && coder <= 'z'){
+                coder-=13;
+            }
+            enigma.append(coder);
+        }
+        return enigma.toString();
     }
 
     public String encrypt(String text) {
-        for (int i = 0; i < text.length(); i++ ){
-            
-        }
-        return text;
+
+        return crypt(text);
     }
 
     public String decrypt(String text) {
-        return text;
+        return crypt(text);
     }
 
     public static String rotate(String s, Character c) {
